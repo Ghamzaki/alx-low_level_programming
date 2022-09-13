@@ -2,7 +2,7 @@
 
 /**
  * main - prints putchar
- * Return: always 0
+ * Return: always 0 (success)
  */
 int main(void)
 {
@@ -14,6 +14,6 @@ int main(void)
 	{
 		_putchar(str[count]);
 	}
-	_puchar('\n');
+	_putchar('\n');
 	return (0);
 }
