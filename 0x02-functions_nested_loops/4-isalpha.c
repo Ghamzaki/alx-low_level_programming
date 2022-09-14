@@ -2,7 +2,8 @@
 
 /**
  * _isalpha - Entry point
- * check for alphabets character
+ * @c: the integer value it receives
+ * Description: checks if alphabet
  * Return:0 or 1
  */
 
