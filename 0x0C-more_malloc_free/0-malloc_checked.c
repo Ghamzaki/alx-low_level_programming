@@ -1,16 +1,19 @@
-#include <stdlib.h>
-
+#include "main.h"
 /**
- * *malloc_checked - allocates memory using malloc and exit if failed
- * @b: int
- * Return: pointer to the array initialized or NULL
+ *malloc_checked - array for prints a string
+ *@b: number of memory
+ *Return: void
  */
 
 void *malloc_checked(unsigned int b)
 {
-int *m = malloc(b);
-if (m == 0)
-	exit(98);
+void *p;
 
-return (m);
+p = malloc(b);
+if (p == NULL)
+{
+exit(98);
+}
+
+return (p);
 }
