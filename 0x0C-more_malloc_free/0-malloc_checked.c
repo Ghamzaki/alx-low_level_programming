@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 /**
  *malloc_checked - array for prints a string
  *@b: number of memory
