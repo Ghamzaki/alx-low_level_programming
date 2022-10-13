@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-
 /**
  * print_all - prints all
  * @format: param
@@ -44,7 +43,6 @@ void print_all(const char * const format, ...)
 				printf("%s", str);
 				break;
 		} i++;
-
 	}
 	printf("\n"), va_end(valist);
 }
