@@ -1,1 +1,1 @@
-bitwise manipulation/operation
+low level programing
