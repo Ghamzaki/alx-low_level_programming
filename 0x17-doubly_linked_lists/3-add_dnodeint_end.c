@@ -1,22 +1,38 @@
 #include "lists.h"
+#include <string.h>
+#include <stdio.h>
 
 /**
- * free_dlistint - frees a dlistint_t list
+ * add_dnodeint_end - add a node at the end of a linked list
+ * @head: The character to print
+ * @n: string for the new node
  *
- * @head: head of the list
- * Return: no return
+ * Return: new node
  */
-void free_dlistint(dlistint_t *head)
+
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *tmp;
+	dlistint_t *current;
+	dlistint_t *new_node;
 
-	if (head != NULL)
-		while (head->prev != NULL)
-			head = head->prev;
+	current = *head;
+	while (current && current->next != NULL)
+		current = current->next;
 
-	while ((tmp = head) != NULL)
+	new_node = malloc(sizeof(dlistint_t));
+	if (new_node == NULL)
 	{
-		head = head->next;
-		free(tmp);
+		free(new_node);
+		return (NULL);
 	}
+	new_node->n = n;
+	new_node->next = NULL;
+    new_node->prev = current;
+
+	if (current)
+		current->next = new_node;
+	else
+		*head = new_node;
+
+	return (new_node);
 }
