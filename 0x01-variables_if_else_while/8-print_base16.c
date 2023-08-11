@@ -15,7 +15,7 @@ int main(void)
 	{
 		putchar(hex);
 	}
-	for (deci = 'a'; deci <= 'e'; deci++)
+	for (deci = 'a'; deci <= 'f'; deci++)
 	{
 		putchar(deci);
 	}
