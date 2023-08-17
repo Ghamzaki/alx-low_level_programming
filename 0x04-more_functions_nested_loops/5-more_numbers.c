@@ -4,14 +4,18 @@
  * print_numbers - prints numbers
  * from 0 to 9
  */
-void print_numbers(void)
+void more_numbers(void)
 {
-	int i;
+	int i, j;
 
-	for (i = '0'; i <= '9'; i++)
+	for (j = 0; j <= 9; j++)
 	{
-		if (i != '2' && i != '4')
-		_putchar(i);
+		for (i = 0; i <= 14; i++)
+		{
+			if (i >= 10)
+				_putchar(i / 10 + '0');
+			_putchar(i % 10 + '0');
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
