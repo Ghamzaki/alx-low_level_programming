@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <strings.h>
 #include <time.h>
+#include <stddef.h>
+#include <stdlib.h>
 int _atoi(char *s);
 char *_strcpy(char *dest, char *src);
 void print_array(int *a, int n);
