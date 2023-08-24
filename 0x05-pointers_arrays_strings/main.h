@@ -6,6 +6,7 @@
 #include <time.h>
 #include <stddef.h>
 #include <stdlib.h>
+int _putchar(char c)
 int _atoi(char *s);
 char *_strcpy(char *dest, char *src);
 void print_array(int *a, int n);
