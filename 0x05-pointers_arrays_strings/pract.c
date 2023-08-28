@@ -5,18 +5,28 @@
  *
  * Return: Always (0)
  */
-char *_strcpy(char *dest, char *src)
+int _atoi(char *s)
 {
-	int i = 0, len;
+	int i = 0, result = 0;
+	int sign = 1;
 
-	while (src[i] >= '\0')
+	while (s[i] != ' ')
 	{
 		i++;
-		len = i - 1;
 	}
-	for (i = 0; i < len; i++)
+	if (s[i] >= '-')
 	{
-		dest[i] = src[i];
+		sign = -1;
+		i++;
 	}
-	return (dest);
+	else if (s[i] == '+') 
+	{
+        i++;
+    	}
+	while (s[i] >= '0' && s[i] <= '9') 
+	{
+        result = (s[i] - '0');
+        i++;
+    	}
+	return (result * sign);
 }
