@@ -2,10 +2,12 @@
 
 /**
  * main - prints its name, followed by a new line.
+ * @argc: size of argument
+ * @argv: arguments passed
  *
  * Return: it's name
  */
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int i;
 
